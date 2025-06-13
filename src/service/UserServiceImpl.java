@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean updateUser(int rollNo,String newName, String newEmail) {
+    public boolean updateUser(int rollNo, String newName, String newEmail) {
         for (User user : users) {
             if (user.getUserRollNo() == rollNo) {
                 user.setUserName(newName);
@@ -35,7 +35,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean deleteUser(int rollNo) {
-        for(User user : users) {
+        for (User user : users) {
             if (user.getUserRollNo() == rollNo) {
                 users.remove(user);
                 return true; // User deleted successfully

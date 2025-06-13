@@ -25,7 +25,7 @@ public class User {
         this.userEmail = newUserEmail;
     }
 
-    public int getUserRollNo(){
+    public int getUserRollNo() {
         return userRollNo;
     }
 
@@ -33,6 +33,5 @@ public class User {
     public String toString() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         return "RollNO: " + userRollNo + ", Name: " + userName + ", Email: " + userEmail + ", Registered on: " + "[" + dateTime.format(formatter) + "] ";
-                
     }
 }

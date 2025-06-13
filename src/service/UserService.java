@@ -9,7 +9,7 @@ public interface UserService {
 
     public List<User> getAllUsers();
 
-    public boolean updateUser(int RollNo,String newName, String newEmail);
+    public boolean updateUser(int RollNo, String newName, String newEmail);
 
     public boolean deleteUser(int RollNo);
 }
