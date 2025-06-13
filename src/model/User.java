@@ -1,6 +1,7 @@
 package model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class User {
 
@@ -30,11 +31,8 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{"
-                + "rollNo='" + userRollNo + '\''
-                + ", name='" + userName + '\''
-                + ", email='" + userEmail + '\''
-                + ", created='" + dateTime + '\''
-                + '}';
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        return "RollNO: " + userRollNo + ", Name: " + userName + ", Email: " + userEmail + ", Registered on: " + "[" + dateTime.format(formatter) + "] ";
+                
     }
 }
