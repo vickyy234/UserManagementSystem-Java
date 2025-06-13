@@ -8,7 +8,7 @@ import service.UserServiceImpl;
 
 public class choiceUtility {
 
-    public choiceUtility(){
+    public choiceUtility() {
         //Sammple data starts
         service.addUser("Arunagiri", "arunagiri1234@example.com", 1);
         service.addUser("Boomika", "boomika@example.com", 2);

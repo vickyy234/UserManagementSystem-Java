@@ -1,25 +1,20 @@
 
 import java.util.Scanner;
 import utility.choiceUtility;
+import utility.menu_Utility;
 
 public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         choiceUtility util = new choiceUtility();
+        menu_Utility menu = new menu_Utility();
 
         while (true) {
-            System.out.println("======= User Management System =======");
-            System.out.println("1. Add User\n2. View All Users\n3. Update User\n4. Delete User\n5. Exit");
-            System.out.print("Enter your choice: ");
-            int choice;
-            if (sc.hasNextInt()) {
-                choice = sc.nextInt();
-                sc.nextLine(); // Consume the newline character left by nextInt
-            } else {
-                System.out.println("\nInvalid input! Please enter a number between 1 and 5.");
-                sc.nextLine(); // Consume the newline character left by nextInt
-                continue; // Restart the loop
+
+            int choice = menu.display();
+            if (choice == 0) { // Invalid choice input
+                continue; //Restart loop 
             }
 
             switch (choice) {
